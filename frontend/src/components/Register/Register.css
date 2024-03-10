@@ -1,0 +1,38 @@
+
+.Register-page{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+ 
+    background: linear-gradient(to top,#7a797e, #215464);  
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    width: 300px; 
+}
+
+
+.err{
+    padding-top:3px;
+    border-radius: 10px;
+    height: 50px;
+    background-color: hsla(0, 100%, 50%, 0.402);
+    color: white;
+    text-align: center;
+}
+.succ{
+    padding-top:3px;
+    border-radius: 10px;
+    height: 50px;
+    background-color: rgb(78, 142, 78);
+    color: black;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+.list{
+    position:static;
+    margin-left: 15px;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 5px;
+    fill:white;
+    cursor: pointer;
+
+}
+.list:hover{
+    fill: gray;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.notification:hover{
+    fill: gray;
+    cursor: pointer;
+}
+.logo3{
+    height: 25px;
+    width: 25px;
+}
