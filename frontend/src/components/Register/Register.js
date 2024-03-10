@@ -18,7 +18,7 @@ const Register = () => {
   const navigate = useNavigate();
   const sendRegister = () => {
     axios
-      .post("http://localhost:5000/users/register", {
+      .post("https://tawsela.onrender.com/users/register", {
         firstName,
         lastName,
         email,

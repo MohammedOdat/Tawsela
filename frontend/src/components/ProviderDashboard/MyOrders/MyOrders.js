@@ -14,7 +14,7 @@ function MyVerticallyCenteredModal(props) {
   const updatePrice = (id) => {
     axios
       .put(
-        `http://localhost:5000/orders/${id}`,
+        `https://tawsela.onrender.com/orders/${id}`,
         { price: price, state: "pending" },
         { headers: { authorization: `Bearer ${token}` } }
       )
@@ -106,7 +106,7 @@ const MyOrders = ({ state }) => {
   const getAllOrders = () => {
     setLoader(true);
     axios
-      .get(`http://localhost:5000/orders/provider/${userId}`, {
+      .get(`https://tawsela.onrender.com/orders/provider/${userId}`, {
         headers: {
           authorization: `Bearer ${token}`,
         },
@@ -136,12 +136,12 @@ const MyOrders = ({ state }) => {
       return ele._id != id;
     });
     setOrders(newOrders);
-    axios.delete(`http://localhost:5000/orders/${id}`);
+    axios.delete(`https://tawsela.onrender.com/orders/${id}`);
   };
   const updateOrder = (id) => {
     axios
       .put(
-        `http://localhost:5000/orders/${id}`,
+        `https://tawsela.onrender.com/orders/${id}`,
         { state: "completed" },
         { headers: { authorization: `Bearer ${token}` } }
       )

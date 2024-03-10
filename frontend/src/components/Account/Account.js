@@ -16,7 +16,7 @@ const Account = () => {
   const [field, setField] = useState("");
   const updateUser = () => {
     axios
-      .put(`http://localhost:5000/users/${userId}`, update, {
+      .put(`https://tawsela.onrender.com/users/${userId}`, update, {
         headers: { authorization: `Bearer ${token}` },
       })
       .then((result) => {
@@ -29,7 +29,7 @@ const Account = () => {
   const getinfo =()=>{
      setLoader(true);
     axios
-      .get(`http://localhost:5000/users/user/${userId}`, {
+      .get(`https://tawsela.onrender.com/users/user/${userId}`, {
         headers: { authorization: `Bearer ${token}` },
       })
       .then((result) => {

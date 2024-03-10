@@ -6,7 +6,7 @@ const Location = (props) => {
   const [lng, setLng] = useState(null);
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/orders/${props.orderId}`)
+      .get(`https://tawsela.onrender.com/orders/${props.orderId}`)
       .then((result) => {
         setLat(result.data.orders[0].location[0]);
         setLng(result.data.orders[0].location[1]);

@@ -16,7 +16,7 @@ const ClientDashboard = () => {
   useEffect(() => {
     service &&
       axios
-        .post(`http://localhost:5000/users/service`, { serviceType: service })
+        .post(`https://tawsela.onrender.com/users/service`, { serviceType: service })
         .then((result) => {
           setusers(result.data.users);
         })

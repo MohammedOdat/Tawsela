@@ -27,7 +27,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/users/user/${userId}`, {
+      .get(`https://tawsela.onrender.com/users/user/${userId}`, {
         headers: { authorization: `Bearer ${token}` },
       })
       .then((result) => {
@@ -40,7 +40,7 @@ const NavBar = () => {
   }, []);
   const getNotification = () => {
     axios
-      .get(`http://localhost:5000/orders/notification/${userId}`, {
+      .get(`https://tawsela.onrender.com/orders/notification/${userId}`, {
         headers: { authorization: `Bearer ${token}` },
       })
       .then((result) => {
@@ -66,7 +66,7 @@ const NavBar = () => {
   };
   const rejectOrder = (id) => {
     axios
-      .delete(`http://localhost:5000/orders/${id}`)
+      .delete(`https://tawsela.onrender.com/orders/${id}`)
       .then((result) => {
         const newNotification = notification.filter((ele, i) => {
           return ele._id != id;
@@ -86,7 +86,7 @@ const NavBar = () => {
   const updateOrder = (id) => {
     axios
       .put(
-        `http://localhost:5000/orders/${id}`,
+        `https://tawsela.onrender.com/orders/${id}`,
         { state: "processing" },
         { headers: { authorization: `Bearer ${token}` } }
       )

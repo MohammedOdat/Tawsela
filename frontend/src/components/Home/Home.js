@@ -15,7 +15,7 @@ const Home = () => {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("http://localhost:5000/users/check", {
+      .get("https://tawsela.onrender.com/users/check", {
         headers: { authorization: `Bearer ${token}` },
       })
       .then((result) => {
